@@ -25,6 +25,10 @@ class Animal(ABC):
     def says(self):
         pass
 
+    @property
+    def animal_status(self):
+        print(f"{self.name} is {self.a_type}")
+
 
 class Cat(Animal):
     def __init__(self, name: str, a_type: str):
@@ -37,6 +41,7 @@ class Cat(Animal):
 cat = Cat("Barsik", "home")
 
 cat.says()
+cat.animal_status
 
 
 class Dog(Animal):
@@ -49,6 +54,7 @@ class Dog(Animal):
 
 dog = Dog("Tuzik", "homeless")
 dog.says()
+dog.animal_status
 
 
 class Cow(Animal):
@@ -61,3 +67,4 @@ class Cow(Animal):
 
 cow = Cow("Мурка", "Домашняя")
 cow.says()
+cow.animal_status
